@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Daren's Website</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body style = "background-color:aliceblue">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="/">
+            <img src="../static/images/bishop.png" width = "40" th:src = "@{images/bishop.png}"/>
+        </a>
+        <a class="navbar-brand" href="/">Daren's Website</a>    
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="editProfile">Edit Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="registration">Sign up</a>
+          </li>
+        </ul>
+      </nav>
+      <div class = "row" style="padding-top: 200px; padding-left: 670px;">
+        <h2 th:text = "${Name}"></h2>
+    </div>
+      <div class = "col" style = "padding-top: 15px;  padding-left: 570px;">
+          <div class = "row">
+            <img th:src="${userProfilePic}" width = "300" height = "300"/>
+          </div>
+          <div class = "row" style = "padding-top: 20px; padding-left:95px;">
+            <h4>Biography:</h4>
+          </div>
+      </div>
+      <div class = "row" style = "padding-top: 10px; margin-left:550px; margin-right:600px">
+        <p th:text=${bio}>
+            My name is Daren James. I was born in the Bronx, New York. I was a happy kid, until one day in middle school my dad got arrested
+            for killing my mom. It changed my life forever, and from that day forward I wanted to be a forensic investigator so I could put 
+            people like my father in jail. One day, the particle accelerator in my city exploded. At the same time, I was working in my lab.
+            I got hit by a bolt of lighting, while some chemicals fell on top of me. I was knocked into a coma, and didn't wake up for days. 
+            When I did, I found that something about me changed. I was fast, really fast and could move at superspeed. From that day forward,
+            I became a hero, a symbol of justice, the fastest man alive. I am the flash.
+          </p>
+    </div>
+</body>
+</html>

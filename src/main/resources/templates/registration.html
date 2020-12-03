@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Login</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body style = "background-color:aliceblue">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="/">
+            <a class="navbar-brand" href="/">
+                <img src="../static/images/bishop.png" width = "40" th:src = "@{images/bishop.png}"/>
+            </a>
+            <a class="navbar-brand" href="/">Daren's Website</a>    
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="editProfile">Edit Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="login">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="registration">Sign up</a>
+                </li>
+              </ul>
+      </nav>
+      <hr/>
+      <hr/>
+      <hr/>
+    <h3 style = "padding-left: 10px;"> Register to create a profile: </h3>
+    <form style="padding-left : 10px" action="/add"  method="post">
+        <label >Username (username):</label></br>
+        <input type="text" id="loginname" name = "loginname" required></br>
+
+        <label >Password (password):</label></br>
+        <input type="text" id="password" name = "pword" required>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
